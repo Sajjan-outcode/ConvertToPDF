@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CDE3BFC2A26104A003CAD9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3BFB2A26104A003CAD9A /* AppDelegate.swift */; };
+		7CDE3BFE2A26104A003CAD9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3BFD2A26104A003CAD9A /* SceneDelegate.swift */; };
+		7CDE3C002A26104A003CAD9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3BFF2A26104A003CAD9A /* ViewController.swift */; };
+		7CDE3C032A26104A003CAD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE3C012A26104A003CAD9A /* Main.storyboard */; };
+		7CDE3C052A26104B003CAD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE3C042A26104B003CAD9A /* Assets.xcassets */; };
+		7CDE3C082A26104B003CAD9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE3C062A26104B003CAD9A /* LaunchScreen.storyboard */; };
+		7CDE3C132A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3C102A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift */; };
+		7CDE3C142A261071003CAD9A /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3C122A261071003CAD9A /* PDFManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7CDE3BF82A26104A003CAD9A /* ConvertScrollViewToPDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertScrollViewToPDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDE3BFB2A26104A003CAD9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CDE3BFD2A26104A003CAD9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7CDE3BFF2A26104A003CAD9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CDE3C022A26104A003CAD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7CDE3C042A26104B003CAD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CDE3C072A26104B003CAD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CDE3C092A26104B003CAD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CDE3C102A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollablePdfViewSnapshotter.swift; sourceTree = "<group>"; };
+		7CDE3C122A261071003CAD9A /* PDFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CDE3BF52A26104A003CAD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CDE3BEF2A26104A003CAD9A = {
+			isa = PBXGroup;
+			children = (
+				7CDE3BFA2A26104A003CAD9A /* ConvertScrollViewToPDF */,
+				7CDE3BF92A26104A003CAD9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CDE3BF92A26104A003CAD9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE3BF82A26104A003CAD9A /* ConvertScrollViewToPDF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CDE3BFA2A26104A003CAD9A /* ConvertScrollViewToPDF */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE3C0F2A261071003CAD9A /* Helper */,
+				7CDE3C112A261071003CAD9A /* Utilities */,
+				7CDE3BFB2A26104A003CAD9A /* AppDelegate.swift */,
+				7CDE3BFD2A26104A003CAD9A /* SceneDelegate.swift */,
+				7CDE3BFF2A26104A003CAD9A /* ViewController.swift */,
+				7CDE3C012A26104A003CAD9A /* Main.storyboard */,
+				7CDE3C042A26104B003CAD9A /* Assets.xcassets */,
+				7CDE3C062A26104B003CAD9A /* LaunchScreen.storyboard */,
+				7CDE3C092A26104B003CAD9A /* Info.plist */,
+			);
+			path = ConvertScrollViewToPDF;
+			sourceTree = "<group>";
+		};
+		7CDE3C0F2A261071003CAD9A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE3C102A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7CDE3C112A261071003CAD9A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE3C122A261071003CAD9A /* PDFManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CDE3BF72A26104A003CAD9A /* ConvertScrollViewToPDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CDE3C0C2A26104B003CAD9A /* Build configuration list for PBXNativeTarget "ConvertScrollViewToPDF" */;
+			buildPhases = (
+				7CDE3BF42A26104A003CAD9A /* Sources */,
+				7CDE3BF52A26104A003CAD9A /* Frameworks */,
+				7CDE3BF62A26104A003CAD9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConvertScrollViewToPDF;
+			productName = ConvertScrollViewToPDF;
+			productReference = 7CDE3BF82A26104A003CAD9A /* ConvertScrollViewToPDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CDE3BF02A26104A003CAD9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7CDE3BF72A26104A003CAD9A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 7CDE3BF32A26104A003CAD9A /* Build configuration list for PBXProject "ConvertScrollViewToPDF" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CDE3BEF2A26104A003CAD9A;
+			productRefGroup = 7CDE3BF92A26104A003CAD9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CDE3BF72A26104A003CAD9A /* ConvertScrollViewToPDF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CDE3BF62A26104A003CAD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDE3C082A26104B003CAD9A /* LaunchScreen.storyboard in Resources */,
+				7CDE3C052A26104B003CAD9A /* Assets.xcassets in Resources */,
+				7CDE3C032A26104A003CAD9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CDE3BF42A26104A003CAD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDE3C132A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift in Sources */,
+				7CDE3C002A26104A003CAD9A /* ViewController.swift in Sources */,
+				7CDE3C142A261071003CAD9A /* PDFManager.swift in Sources */,
+				7CDE3BFC2A26104A003CAD9A /* AppDelegate.swift in Sources */,
+				7CDE3BFE2A26104A003CAD9A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7CDE3C012A26104A003CAD9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CDE3C022A26104A003CAD9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7CDE3C062A26104B003CAD9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CDE3C072A26104B003CAD9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CDE3C0A2A26104B003CAD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CDE3C0B2A26104B003CAD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CDE3C0D2A26104B003CAD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2UZ988WGP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvertScrollViewToPDF/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ConvertScrollViewToPDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CDE3C0E2A26104B003CAD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2UZ988WGP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvertScrollViewToPDF/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ConvertScrollViewToPDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CDE3BF32A26104A003CAD9A /* Build configuration list for PBXProject "ConvertScrollViewToPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CDE3C0A2A26104B003CAD9A /* Debug */,
+				7CDE3C0B2A26104B003CAD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CDE3C0C2A26104B003CAD9A /* Build configuration list for PBXNativeTarget "ConvertScrollViewToPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CDE3C0D2A26104B003CAD9A /* Debug */,
+				7CDE3C0E2A26104B003CAD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CDE3BF02A26104A003CAD9A /* Project object */;
+}
