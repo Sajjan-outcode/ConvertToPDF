@@ -15,6 +15,8 @@
 		7CDE3C082A26104B003CAD9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE3C062A26104B003CAD9A /* LaunchScreen.storyboard */; };
 		7CDE3C132A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3C102A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift */; };
 		7CDE3C142A261071003CAD9A /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3C122A261071003CAD9A /* PDFManager.swift */; };
+		7CDE3C162A274266003CAD9A /* Screenshot 2023-05-31 at 14.37.46.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE3C152A274266003CAD9A /* Screenshot 2023-05-31 at 14.37.46.png */; };
+		7CDE3C182A274399003CAD9A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE3C172A274398003CAD9A /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7CDE3C092A26104B003CAD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CDE3C102A261071003CAD9A /* ScrollablePdfViewSnapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollablePdfViewSnapshotter.swift; sourceTree = "<group>"; };
 		7CDE3C122A261071003CAD9A /* PDFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
+		7CDE3C152A274266003CAD9A /* Screenshot 2023-05-31 at 14.37.46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-05-31 at 14.37.46.png"; sourceTree = "<group>"; };
+		7CDE3C172A274398003CAD9A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,10 @@
 				7CDE3BFF2A26104A003CAD9A /* ViewController.swift */,
 				7CDE3C012A26104A003CAD9A /* Main.storyboard */,
 				7CDE3C042A26104B003CAD9A /* Assets.xcassets */,
+				7CDE3C152A274266003CAD9A /* Screenshot 2023-05-31 at 14.37.46.png */,
 				7CDE3C062A26104B003CAD9A /* LaunchScreen.storyboard */,
 				7CDE3C092A26104B003CAD9A /* Info.plist */,
+				7CDE3C172A274398003CAD9A /* CustomCell.swift */,
 			);
 			path = ConvertScrollViewToPDF;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 			files = (
 				7CDE3C082A26104B003CAD9A /* LaunchScreen.storyboard in Resources */,
 				7CDE3C052A26104B003CAD9A /* Assets.xcassets in Resources */,
+				7CDE3C162A274266003CAD9A /* Screenshot 2023-05-31 at 14.37.46.png in Resources */,
 				7CDE3C032A26104A003CAD9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +171,7 @@
 				7CDE3C002A26104A003CAD9A /* ViewController.swift in Sources */,
 				7CDE3C142A261071003CAD9A /* PDFManager.swift in Sources */,
 				7CDE3BFC2A26104A003CAD9A /* AppDelegate.swift in Sources */,
+				7CDE3C182A274399003CAD9A /* CustomCell.swift in Sources */,
 				7CDE3BFE2A26104A003CAD9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,7 +69,7 @@ struct ScollablePdfViewSnapshotter {
                     let offsetHorizontal = CGFloat(indexHorizontal) * pageSize.width
                     let offsetVertical = CGFloat(indexVertical) * pageSize.height
                     
-                    //  scrollView.contentOffset = CGPointMake(offsetHorizontal, offsetVertical)
+                    scrollView.contentOffset = CGPointMake(offsetHorizontal, offsetVertical)
                     // context.translateBy(x: -offsetHorizontal, y: -offsetVertical) // NOTE: Negative offsets
                     
                     /**
@@ -106,11 +106,7 @@ struct ScollablePdfViewSnapshotter {
         return outputData
        }
     
-    func convertViewToScrollView () {
-        
-        
-         
-    }
+
     
     }
     
