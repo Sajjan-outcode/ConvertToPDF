@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
-    
-    
     var tableView: UITableView!
     var scrollView : UIScrollView!
     private lazy var pdfConvertBTn: UIButton = {
@@ -18,17 +16,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         view.setTitle("Convert To PDF", for: .normal)
         view.setTitleColor(UIColor.green, for: .normal)
         view.titleLabel?.textAlignment = .left
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.clear
         view.addTarget(self, action: #selector(generatePDF), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    let imageDataSource = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10","Item 11","Item 12","Item 13","Item 14","Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7","Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10","Item 11","Item 12","Item 13","Item 14","Item 1", "Item 2", "Item 3", "Item 4"]
-    
+
+    let imageDataSource = [UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2")]
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView = UIScrollView(frame: view.bounds)
+        scrollView.insetsLayoutMarginsFromSafeArea = true
         view.addSubview(scrollView)
         scrollView.backgroundColor = UIColor.green
         scrollView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -39,27 +37,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private func setUpTableView(){
        
-        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView = UITableView(frame: scrollView.bounds, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         scrollView.addSubview(tableView)
+ 
     }
     
     private func setUpButton() {
-        self.tableView.addSubview(pdfConvertBTn)
+        self.scrollView.addSubview(pdfConvertBTn)
         pdfConvertBTn.leadingAnchor.constraint(equalTo: tableView.leadingAnchor).isActive = true
-        pdfConvertBTn.topAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
+        pdfConvertBTn.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 40).isActive = true
+        pdfConvertBTn.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: 10).isActive = true
         pdfConvertBTn.widthAnchor.constraint(equalToConstant: 250).isActive = true
         pdfConvertBTn.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
     }
     
     @objc func generatePDF() {
-        let snapshotter = ScollablePdfViewSnapshotter()
-        let data = snapshotter.PDFWithScrollView(scrollView: tableView)
         let manager = PDFManager()
-       // let data = manager.exportAsPdfFromView(view: self.tableView)
+        let data = manager.PDFWithScrollView(scrollView: tableView)
         let fullPath = manager.generatePDF(title: "PDF", data: Data(data))
         let fileUrl = NSURL(fileURLWithPath: "\(fullPath)")
         let shareAll = [fileUrl]
@@ -73,14 +71,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        }
         
         // MARK: - UITableViewDataSource
-        
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return imageDataSource.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = imageDataSource[indexPath.row]
+             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+            cell.image.image = imageDataSource[indexPath.row]
             return cell
         }
     }
