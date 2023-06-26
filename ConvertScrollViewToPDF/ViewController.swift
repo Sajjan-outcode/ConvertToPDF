@@ -11,27 +11,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
     var tableView: UITableView!
     var scrollView : UIScrollView!
-    private lazy var pdfConvertBTn: UIButton = {
-        let view = UIButton()
-        view.setTitle("Convert To PDF", for: .normal)
-        view.setTitleColor(UIColor.green, for: .normal)
-        view.titleLabel?.textAlignment = .left
-        view.backgroundColor = UIColor.clear
-        view.addTarget(self, action: #selector(generatePDF), for: .touchUpInside)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
 
-    let imageDataSource = [UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2")]
+    let imageDataSource = [UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage"),UIImage(named: "CellImage2"),UIImage(named: "CellImage")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.insetsLayoutMarginsFromSafeArea = true
+        scrollView.insetsLayoutMarginsFromSafeArea = false
         view.addSubview(scrollView)
-        scrollView.backgroundColor = UIColor.green
+        scrollView.backgroundColor = UIColor.white
         scrollView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         setUpTableView()
-        setUpButton()
+        setUpNav()
+    }
+    
+    private func setUpNav() {
+        let navBar = UINavigationBar()
+               navBar.translatesAutoresizingMaskIntoConstraints = false
+           let navItem = UINavigationItem(title: "")
+           let button = UIBarButtonItem(title: "convert to PDF", style: .plain, target: self, action: #selector(generatePDF))
+            navItem.rightBarButtonItem = button
+            navBar.items = [navItem]
+            view.addSubview(navBar)
+        let safeArea = view.safeAreaLayoutGuide
+             NSLayoutConstraint.activate([
+                 navBar.topAnchor.constraint(equalTo: safeArea.topAnchor),
+                 navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                 navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+             ])
     }
     
     
@@ -42,19 +49,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         scrollView.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.contentInsetAdjustmentBehavior = .always
  
     }
-    
-    private func setUpButton() {
-        self.scrollView.addSubview(pdfConvertBTn)
-        pdfConvertBTn.leadingAnchor.constraint(equalTo: tableView.leadingAnchor).isActive = true
-        pdfConvertBTn.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 40).isActive = true
-        pdfConvertBTn.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: 10).isActive = true
-        pdfConvertBTn.widthAnchor.constraint(equalToConstant: 250).isActive = true
-        pdfConvertBTn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-    }
-    
     @objc func generatePDF() {
         let manager = PDFManager()
         let data = manager.PDFWithScrollView(scrollView: tableView)

@@ -18,14 +18,14 @@ struct ScollablePdfViewSnapshotter {
         let totalSize = scrollView.contentSize
         
         let numberOfPagesThatFitHorizontally = Int(ceil(totalSize.width / pageSize.width))
-        let numberOfPagesThatFitVertically = Int(ceil(totalSize.height / pageSize.height))
+        let numberOfPagesThatFitVertically   =   Int(ceil(totalSize.height / pageSize.height))
         
         
         let outputData = NSMutableData()
         
         UIGraphicsBeginPDFContextToData(outputData, pageDimension, nil)
         
-        let savedContentOffset = scrollView.contentOffset
+        let savedContentOffset =  scrollView.contentOffset
         let savedContentInset  =  scrollView.contentInset
         
         scrollView.contentInset = UIEdgeInsets.zero
@@ -79,7 +79,6 @@ struct ScollablePdfViewSnapshotter {
                      *  is the most straightforward way to render a layer
                      *  into a context.
                      */
-                    
                     scrollView.layer.render(in: context)
                 }
             }
@@ -94,9 +93,9 @@ struct ScollablePdfViewSnapshotter {
          *  Step 8: Restore the scroll view.
          */
         
-        scrollView.contentInset = savedContentInset
+        scrollView.contentInset  = savedContentInset
         scrollView.contentOffset = savedContentOffset
-        
+        scrollView.clipsToBounds = true
         /**
          *  Step 9: Return the data.
          *          You can write it to a file, or display it the user,
